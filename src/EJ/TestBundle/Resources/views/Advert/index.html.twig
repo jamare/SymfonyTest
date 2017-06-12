@@ -1,0 +1,27 @@
+{# src/EJ/TestBundle/Resources/views/Advert/index.html.twig #}
+
+{% extends "EJTestBundle::layout.html.twig" %}
+
+{% block title %}
+	Accueil - {{ parent() }}
+{% endblock %}
+
+{% block ejplatform_body %}
+
+
+
+        {% for advert in listAdverts %}
+			<div class="box_items">
+				<div class="img_items"></div>
+				<div class="title_items">
+				<a href="{{ path('ej_platform_view', {'id': advert.id}) }}">
+                    {{ advert.title }}
+				</a>
+				</div>
+			</div>
+
+        {% endfor %}
+
+
+{% endblock %}
+

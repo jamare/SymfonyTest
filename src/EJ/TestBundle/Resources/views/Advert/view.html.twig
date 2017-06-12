@@ -1,0 +1,19 @@
+{# src/EJ/TestBundle/Resources/views/Advert/view.html.twig #}
+
+{% extends "EJTestBundle::layout.html.twig" %}
+
+{% block title %}
+    Lecture d'une annonce - {{ parent() }}
+{% endblock %}
+
+{% block ejplatform_body %}
+
+    <h2>{{ advert.title }}</h2>
+
+        {{ advert.content }}
+
+
+
+
+{% endblock %}
+

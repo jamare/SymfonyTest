@@ -1,0 +1,36 @@
+# src/OC/PlatformBundle/Resources/config/routing.yml
+
+ej_platform_home:
+    path:      /index
+    defaults:
+        _controller: EJTestBundle:Advert:index
+        page:        1
+    requirements:
+        page: \d*
+
+ej_platform_view:
+    path:      /advert/{id}
+    defaults:
+        _controller: EJTestBundle:Advert:view
+    requirements:
+        id: \d+
+
+ej_platform_add:
+    path:      /add
+    defaults:
+        _controller: EJTestBundle:Advert:add
+
+ej_platform_edit:
+    path:      /edit/{id}
+    defaults:
+        _controller: EJTestBundle:Advert:edit
+    requirements:
+        id: \d+
+
+ej_platform_delete:
+    path:      /delete/{id}
+    defaults:
+        _controller: EJTestBundle:Advert:delete
+    requirements:
+        id: \d+
+
